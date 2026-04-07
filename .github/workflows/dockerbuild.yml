@@ -18,7 +18,7 @@ jobs:
     - name: Login to GitHub Container Registry
       uses: docker/login-action@v3
       with:
-        registry: qhcr.io
+        registry: ghcr.io
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
 
@@ -35,5 +35,5 @@ jobs:
         platforms: linux/amd64,linux/arm64
         push: true
         tags: |
-          qhcr.io/spleenlab-visionairy/alpine-with-ssh:${{ github.event.release.tag_name }}
-          qhcr.io/spleenlab-visionairy/alpine-with-ssh:latest
+          ghcr.io/spleenlab-visionairy/alpine-with-ssh:${{ github.event.release.tag_name }}
+          ghcr.io/spleenlab-visionairy/alpine-with-ssh:latest
