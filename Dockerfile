@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=alpine:3.23.3
+ARG BASE_IMAGE=alpine:3.24.4
 FROM $BASE_IMAGE
 
 # install typical utilities and openssh-server / openssl
